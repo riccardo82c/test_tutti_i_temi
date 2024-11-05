@@ -1,0 +1,103 @@
+/* badge */
+.badge {
+  @apply inline-block rounded-full font-medium text-sm text-body;
+}
+
+.badge-b {
+  @apply badge border;
+}
+
+.badge-sm {
+  @apply py-[2px] px-2;
+}
+
+.badge-md {
+  @apply py-[4px] px-2;
+}
+
+.badge-lg {
+  @apply py-[6px] px-2;
+}
+
+.badge-white {
+  @apply bg-white border-neutral-100;
+  @apply text-neutral;
+  @apply shadow-xs;
+}
+
+.badge-white svg {
+  @apply stroke-neutral;
+}
+
+.badge-primary {
+  @apply bg-primary-100 border-primary;
+  @apply text-primary;
+}
+
+.badge-primary svg {
+  @apply stroke-primary;
+}
+
+.badge-grey {
+  @apply bg-tertiary-100 border-tertiary;
+  @apply text-tertiary;
+}
+
+.badge-grey svg {
+  @apply stroke-tertiary;
+}
+
+.badge-error {
+  @apply bg-error-100 border-error-600;
+  @apply text-error-600;
+}
+
+.badge-error svg {
+  @apply stroke-error-600;
+}
+
+.badge-alert {
+  @apply bg-alert-100 border-alert-700;
+  @apply text-alert-700;
+}
+
+.badge-alert svg {
+  @apply stroke-alert-700;
+}
+
+.badge-success {
+  @apply bg-success-100 border-success-700;
+  @apply text-success-700;
+}
+
+.badge-success svg {
+  @apply stroke-success-700;
+}
+
+.badge-info {
+  @apply bg-info-100 border-info-600;
+  @apply text-info-600;
+}
+
+.badge-info svg {
+  @apply stroke-info-600;
+}
+
+.badge-dark-transparent {
+  @apply bg-[#101828] bg-opacity-70 text-white;
+  @apply text-white;
+}
+
+.badge-dark-transparent svg {
+  @apply stroke-white;
+}
+
+.badge-disabled {
+  @apply bg-neutral-100 border-neutral-200;
+  @apply text-neutral-200;
+  @apply shadow-xs;
+}
+
+.badge-disabled svg {
+  @apply stroke-neutral-200;
+}

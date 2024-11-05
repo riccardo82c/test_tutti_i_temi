@@ -1,0 +1,49 @@
+html {
+  @apply !text-body !font-body;
+}
+
+.text-hover-normal {
+  @apply text-slate-400 hover:text-slate-700;
+}
+
+/* text h */
+.display-lg {
+  @apply text-[54px] leading-[58px];
+}
+
+.display-md {
+  @apply text-[42px] leading-[46px];
+}
+
+.display-sm {
+  @apply text-[32px] leading-[36px];
+}
+
+.display-xs {
+  @apply text-[24px] leading-[28px];
+}
+
+/* text p */
+.par-xl {
+  @apply text-xl leading-7;
+}
+
+.par-lg {
+  @apply text-lg leading-7;
+}
+
+.par-md {
+  @apply text-md leading-5;
+}
+
+.par-sm {
+  @apply text-sm leading-[17px];
+}
+
+.par-xs {
+  @apply text-xs leading-[14px];
+}
+
+.par-xss {
+  @apply text-xss leading-3;
+}

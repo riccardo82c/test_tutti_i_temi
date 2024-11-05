@@ -1,0 +1,19 @@
+.global-style-wrapper {
+  :deep(.v-btn),
+  :deep(.v-btn:focus),
+  :deep(.v-btn:active),
+  :deep(.v-btn:hover),
+  :deep(.v-btn:focus-visible) {
+    all: unset !important;
+    display: inline-block !important;
+    cursor: pointer !important;
+  }
+
+  :deep(.v-btn.v-btn--disabled),
+  :deep(.v-btn.v-btn--disabled:focus),
+  :deep(.v-btn.v-btn--disabled:active),
+  :deep(.v-btn.v-btn--disabled:hover),
+  :deep(.v-btn.v-btn--disabled:focus-visible) {
+    @apply !text-neutral-200;
+  }
+}

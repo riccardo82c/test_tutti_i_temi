@@ -1,0 +1,287 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vidaloka&display=swap');
+
+@import './reset-style.css';
+@import './typo.css';
+@import './button.css';
+@import './badge.css';
+@import './table.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+}
+
+@layer components {
+  /* backoffice views */
+  .backoffice-views {
+    @apply w-full max-w-7xl mx-auto py-8;
+  }
+
+  /* icon */
+  .icon-small {
+    width: 16px;
+    height: 16px;
+  }
+
+  .icon-medium {
+    width: 20px;
+    height: 20px;
+  }
+
+  .icon-large {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* navbar */
+  nav {
+    .navbar-link {
+      @apply block  text-white hover:underline;
+    }
+
+    .navbar-link-active {
+      @apply block underline rounded md:bg-transparent;
+    }
+  }
+
+  nav.backoffice {
+    .navbar-link {
+      @apply block  hover:text-primary-400;
+    }
+
+    .navbar-link-active {
+      @apply block text-primary-400 rounded md:bg-transparent;
+    }
+  }
+
+  .language-selector {
+    .navbar-language-button {
+      @apply inline-flex items-center font-medium justify-center px-4 py-2 text-sm  rounded;
+    }
+
+    .navbar-language-selector {
+      @apply z-50 my-4 text-base list-none divide-y divide-gray-100 bg-white rounded shadow  fixed top-10;
+    }
+  }
+
+  .language-selector-small {
+    .navbar-language-button {
+      @apply inline-flex items-center font-medium justify-center lg:px-4 py-2 text-sm  rounded;
+    }
+
+    .navbar-language-selector {
+      @apply z-50 lg:my-4 text-base list-none divide-y divide-gray-100 lg:fixed top-12 text-left bg-transparent md:bg-primary-600 bg-opacity-80 md:shadow-md;
+    }
+  }
+
+  /* .navbar-language-button {
+    @apply inline-flex items-center font-medium justify-center px-4 py-2 text-sm  rounded;
+  }
+
+  .navbar-language-selector {
+    @apply z-50 my-4 text-base list-none divide-y divide-gray-100 rounded shadow  fixed top-10 bg-white;
+  } */
+
+  /* footer */
+
+  footer {
+    .footer-link {
+      @apply block  text-white hover:underline cursor-pointer;
+    }
+
+    /* .navbar-link-active {
+      @apply block text-primary-400 rounded md:bg-transparent;
+    } */
+  }
+
+  /* sidebar */
+
+  .sidebar-container {
+    @apply !sticky top-0 self-start;
+    @apply transition-all duration-200 ease-in-out;
+    @apply py-10  flex flex-col relative;
+
+    .sidebar-link {
+      @apply flex items-center py-3 rounded-[4px] hover:bg-neutral-50 min-h-[45px];
+    }
+
+    .sidebar-link-active {
+      @apply bg-primary-100;
+    }
+
+    .sidebar-toggler {
+      @apply absolute right-0 top-[52vh] translate-x-2/4 z-10;
+      @apply bg-white  hover:bg-neutral-50 shadow-sm;
+      @apply rounded-full p-2;
+      @apply grid content-center;
+    }
+  }
+
+  /* form */
+  .form {
+    @apply rounded pb-8 font-body;
+  }
+
+  .form-small {
+    @apply mx-auto max-w-md;
+  }
+
+  .form-full {
+    @apply mx-auto;
+  }
+
+  .form__label {
+    @apply block text-sm font-semibold mb-2 font-body;
+  }
+
+  .form__input {
+    /* border: 1px solid rgba(27, 27, 27, 0.116); */
+    @apply appearance-none rounded-lg py-2 px-3 bg-white leading-tight focus:outline-none font-body;
+    @apply border border-solid border-neutral-200;
+  }
+
+  .form__input:disabled {
+    @apply text-neutral-500;
+  }
+
+  .form__input__full {
+    @apply w-full;
+  }
+
+  .form__radio__input {
+    @apply w-6 h-6  bg-gray-100 border-gray-300;
+  }
+
+  .form__radio__label {
+    @apply text-sm font-medium;
+  }
+
+  .form__checkbox__input {
+    @apply w-6 h-6 text-blue-600 bg-gray-100 border-gray-300 rounded;
+  }
+
+  .form__checkbox__label {
+    @apply text-md font-medium;
+  }
+
+  .error-message {
+    @apply text-red-400 mt-2 pl-3 rounded text-sm block font-body;
+  }
+
+  /* form input[type="search"] */
+
+  .search-input-container {
+    position: relative;
+    display: inline-block;
+
+    .search-icon {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+    }
+
+    .form__input {
+      padding-left: 34px;
+    }
+  }
+
+  /* table */
+  .v-data-table__tr {
+    td {
+      @apply border border-test2 border-b-test2;
+    }
+  }
+
+  /* Reset styles for Vuetify buttons */
+  .v-btn,
+  .v-btn:focus,
+  .v-btn:active,
+  .v-btn:hover,
+  .v-btn:focus-visible {
+    all: unset !important;
+    display: inline-block !important;
+    cursor: pointer !important;
+  }
+
+  /* Styles for disabled Vuetify buttons */
+  .v-btn.v-btn--disabled,
+  .v-btn.v-btn--disabled:focus,
+  .v-btn.v-btn--disabled:active,
+  .v-btn.v-btn--disabled:hover,
+  .v-btn.v-btn--disabled:focus-visible {
+    @apply !text-neutral-200;
+  }
+
+  /* table server*/
+  .v-data-table__thead,
+  .v-data-table__tr {
+    @apply border border-test2;
+  }
+
+  .v-data-table__thead {
+    th {
+      @apply border border-test2 bg-test;
+    }
+  }
+
+  /* table static */
+  .v-table__wrapper {
+    @apply !rounded-lg !border border-neutral-100;
+
+    thead,
+    tr {
+      @apply border border-neutral-100;
+    }
+
+    thead th {
+      @apply border border-neutral-100 bg-primary-100;
+    }
+  }
+
+  /* datepicker */
+  .dp__input {
+    @apply font-body;
+  }
+
+  .dp__outer_menu_wrap.dp--menu-wrapper {
+    @apply !shadow-xl;
+  }
+
+  /* modals */
+  .modal-layover {
+    @apply overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 max-h-full bg-black/[.4] h-full grid justify-items-center lg:p-5;
+  }
+  .custom-datepicker .dp__input {
+    @apply rounded-lg;
+  }
+
+  .custom-datepicker .dp__menu {
+    @apply rounded-lg;
+  }
+
+
+  .custom-layout .v-navigation-drawer__scrim {
+    position: fixed;
+  }
+}
+
+@layer utilities {
+  .custom-scrollbar {
+    @apply scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-slate-300 overflow-y-auto;
+  }
+
+  .custom-first-icon {
+    /* background-image: url('@/assets/left-arrow.png'); */
+    background-size: cover;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+  }
+}

@@ -1,0 +1,162 @@
+/* buttons */
+.btn {
+  @apply flex items-center justify-center font-body;
+  @apply rounded-lg cursor-pointer font-semibold;
+  @apply transition-all duration-200;
+}
+
+.btn-xl {
+  @apply py-[14px] px-4 !text-base;
+  /* @apply py-3 px-6 !text-base max-h-12; */
+}
+
+.btn-lg {
+  @apply py-3 px-4 !text-base;
+}
+
+.btn-md {
+  @apply py-[10px] px-4 !text-sm;
+}
+
+.btn-sm {
+  @apply py-2 px-4 !text-sm;
+}
+
+.btn-icon {
+  @apply py-1 px-2;
+}
+
+/* buttons-primary */
+.btn-primary {
+  @apply btn !text-white bg-primary border border-solid border-primary;
+  @apply hover:bg-primary-600 hover:border-primary-600;
+  @apply active:bg-primary active:outline-none active:ring-2 active:ring-primary-200;
+}
+
+/* buttons-primary.disabled*/
+.btn-primary.disabled {
+  @apply bg-neutral-100 !text-neutral-200 border-neutral-100;
+  @apply hover:bg-neutral-100 hover:border-neutral-100;
+  @apply active:bg-neutral-100 active:border-neutral-100;
+  @apply focus:outline-none focus:ring-0;
+  @apply pointer-events-none;
+}
+
+/* buttons secondary */
+.btn-secondary {
+  @apply btn !text-primary-600 bg-white border border-solid border-primary-200;
+  @apply hover:bg-primary-50 hover:border-primary-50;
+  @apply active:bg-primary-50 active:outline-none active:ring-2 active:ring-primary;
+}
+
+/* buttons secondary.disabled */
+.btn-secondary.disabled {
+  @apply bg-neutral-100 !text-neutral-200 border-neutral-200 border;
+  @apply hover:bg-neutral-100 hover:border-neutral-200;
+  @apply active:bg-neutral-100 active:border-neutral-200;
+  @apply focus:outline-none focus:ring-0;
+  @apply pointer-events-none;
+}
+
+/* buttons-tertiary */
+.btn-tertiary {
+  @apply btn !text-white bg-tertiary border border-solid border-tertiary;
+  @apply hover:bg-tertiary-700 hover:border-tertiary-700;
+  @apply active:bg-tertiary active:outline-none active:ring-2 active:ring-tertiary-200;
+}
+
+/* buttons-tertiary.disabled*/
+.btn-tertiary.disabled {
+  @apply bg-neutral-100 !text-neutral-200 border-neutral-100;
+  @apply hover:bg-neutral-100 hover:border-neutral-100;
+  @apply active:bg-neutral-100 active:border-neutral-100;
+  @apply focus:outline-none focus:ring-0;
+  @apply pointer-events-none;
+}
+
+/* buttons ghost */
+.btn-ghost {
+  @apply btn !text-primary-600 bg-white border border-solid border-transparent;
+  @apply hover:bg-primary-50 hover:border-primary-50;
+  @apply active:bg-primary-100;
+  @apply relative;
+}
+
+.btn-ghost.selected {
+  @apply btn !text-primary-600 bg-white border border-solid border-transparent;
+  @apply bg-primary-50 border-primary-50;
+  @apply active:bg-primary-100;
+  @apply relative;
+}
+
+.btn-ghost-underline {
+  @apply btn !text-primary-600 bg-white border border-solid border-transparent;
+  @apply hover:bg-primary-50 hover:border-primary-50;
+  @apply active:bg-primary-100;
+  @apply relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 72%;
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    @apply bg-primary;
+  }
+}
+
+/* buttons ghost.disabled */
+.btn-ghost.disabled {
+  @apply bg-white !text-neutral-200 border-2;
+  @apply hover:bg-neutral-100 hover:border-neutral-200;
+  @apply active:bg-neutral-100 active:border-neutral-200;
+  @apply focus:outline-none focus:ring-0;
+  @apply pointer-events-none;
+}
+
+.btn-ghost-underline.disabled {
+  @apply bg-white !text-neutral-200 border-2;
+  @apply hover:bg-neutral-100 hover:border-neutral-200;
+  @apply active:bg-neutral-100 active:border-neutral-200;
+  @apply focus:outline-none focus:ring-0;
+  @apply pointer-events-none;
+
+  &::before {
+    @apply bg-neutral-200;
+  }
+}
+
+.btn-danger {
+  @apply btn !text-white bg-error border border-solid border-error;
+  @apply hover:bg-error-600 hover:border-error-600;
+  @apply active:bg-error active:outline-none active:ring-2 active:ring-error-200;
+}
+
+/* buttons-primary.disabled*/
+.btn-danger.disabled {
+  @apply bg-neutral-100 !text-neutral-200 border-neutral-100;
+  @apply hover:bg-neutral-100 hover:border-neutral-100;
+  @apply active:bg-neutral-100 active:border-neutral-100;
+  @apply focus:outline-none focus:ring-0;
+  @apply pointer-events-none;
+}
+
+.btn svg {
+  @apply stroke-white;
+}
+
+.btn-secondary svg,
+.btn-ghost svg {
+  @apply stroke-primary-600;
+}
+
+.btn.disabled svg {
+  @apply stroke-neutral-200;
+}
+
+.btn-test {
+  @apply btn;
+  @apply text-slate-700 hover:text-test bg-test2 hover:bg-slate-400 cursor-pointer;
+}
